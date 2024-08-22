@@ -1,29 +1,94 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Manrope font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap"
+      rel="stylesheet"
+    />
+
     <!-- Tailwind CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
       tailwind.config = {
         theme: {
           extend: {
-            colors: {
-              clifford: "#da373d",
+            fontFamily: {
+              manrope: ["Manrope", "sans-serif"],
+            },
+            backgroundImage: {
+              "header-gradient":
+                "linear-gradient(0deg, rgb(255, 255, 255), rgba(255, 255, 255, 0) 100%)",
             },
           },
         },
       };
     </script>
     <!-- daisyUI -->
-    <link
+    <!-- <link
       href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css"
       rel="stylesheet"
       type="text/css"
-    />
+    /> -->
 
     <title>Document</title>
   </head>
-  <body></body>
+  <body class="font-manrope">
+    <div class="mx-auto px-5 pt-7 lg:max-w-screen-lg lg:pt-12">
+      <header class="bg-header-gradient">
+        <nav class="flex items-center justify-between">
+          <div class="flex cursor-pointer items-center justify-between gap-2">
+            <div
+              class="flex h-8 w-8 items-center justify-center rounded-2xl bg-lime-300"
+            >
+              <img src="./assets/arrow.png" alt="arrow-img" class="w-4" />
+            </div>
+            <div class="text-2xl font-bold text-black">Rinterio</div>
+          </div>
+
+          <div
+            class="flex h-10 w-10 items-center justify-center rounded-full border border-gray-200 bg-white lg:hidden"
+          >
+            <img src="./assets/burger.png" alt="burger-menu" class="w-4" />
+          </div>
+          <ul class="hidden space-x-4 lg:flex">
+            <li class="cursor-pointer font-semibold">Home</li>
+            <li class="cursor-pointer text-gray-500">Service</li>
+            <li class="cursor-pointer text-gray-500">Portfolio</li>
+            <li class="cursor-pointer text-gray-500">Blog</li>
+            <li class="cursor-pointer text-gray-500">Contact Us</li>
+          </ul>
+
+          <div class="hidden items-center justify-between gap-4 lg:flex">
+            <div
+              class="flex h-10 w-10 cursor-pointer items-center justify-center rounded-full border border-gray-300 shadow-sm"
+            >
+              <img src="./assets/search.png" alt="search" class="h-6 w-6" />
+            </div>
+
+            <div
+              class="flex h-10 w-10 cursor-pointer items-center justify-center rounded-full border border-gray-300 shadow-sm"
+            >
+              <img src="./assets/cart.png" alt="search" class="h-6 w-6" />
+            </div>
+
+            <div
+              class="flex cursor-pointer items-center justify-center gap-2 rounded-3xl bg-lime-300 px-5 py-3"
+            >
+              <div class="text-sm font-bold">Book Consultant</div>
+              <div
+                class="flex h-8 w-8 items-center justify-center rounded-full bg-gray-950"
+              >
+                <img src="./assets/arrow.png" class="h-3 w-3 invert" />
+              </div>
+            </div>
+          </div>
+        </nav>
+      </header>
+    </div>
+  </body>
 </html>

@@ -1,3 +1,4 @@
 ui/
 README.md
-tailwind.config.js
+node_modules/
+.vscode
